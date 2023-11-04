@@ -1,0 +1,83 @@
+.hero {
+    height: calc(100vh - 60px);
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(#264653, #354e58);
+    background-image: url('../../../public/heroimgbg.png');
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    /* border: 2px solid #11100f; */
+}
+
+.hero__image {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    background-image: url('../../../public/gb2.png');
+    top: 0;
+    left: 0;
+    /* border: 2px solid #dbb32d; */
+}
+
+.hero__text {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+   /*  border: 1px solid #10ee09; */
+}
+
+.hero__text h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: rgb(153, 224, 214);
+    /* text-shadow: 0 0 3px #0a0909; */
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: hsla(0, 4%, 5%, 0.521);
+    /* border: 1px solid red; */
+}
+
+.hero__text h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    color: #0e0d0d;
+    margin-bottom: 1rem;
+   /*  border: 1px solid red; */
+}
+
+.hero__text p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(3, 85, 85);
+    margin-bottom: 1rem;
+    /* border: 1px solid red; */
+}
+
+.hero__buttons {
+    display: flex;
+    gap: 1rem;
+    /* border: 1px solid red; */
+}
+
+.hero__buttons button{
+    font-size: 1rem;
+    font-weight: 500;
+    color: lightcyan;
+    padding: 0.5rem 1rem;
+    border: 1px solid #24221f;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: all 0.3s ease-in;
+}
+
+.hero__buttons button:hover {
+    background-color: #e9c46a;
+    color: #0a0909;
+    cursor: pointer;
+}
