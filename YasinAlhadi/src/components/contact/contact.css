@@ -1,0 +1,131 @@
+.contact {
+    max-width: 1366px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: auto;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: 400;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.contact__text {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact__text h1 {
+    font-size: 4.5rem;
+    font-weight: 600;
+    line-height: 88px;
+    color: antiquewhite;
+    margin-bottom: 10px;
+}
+
+.contact__text h1::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: orange;
+    margin: 10px auto;
+}
+
+.contact__text h1:hover {
+    color: orange;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact__text h1:hover::after {
+    background-color: antiquewhite;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact__text p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: antiquewhite;
+    margin-bottom: 10px;
+}
+
+.info {
+    display: flex;
+    gap: 10px;
+    padding: 1rem;
+    margin-top: 10px;
+}
+
+.info h3 {
+    font-weight: 300;
+    color: orange;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: all 0.3s ease-in-out;
+}
+
+.info span {
+    font-size: 1rem;
+    color: antiquewhite;
+}
+
+.contact__form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin-right: 20px;
+}
+
+.contact__form input, .contact__form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #dbcccc;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    outline: none;
+}
+
+.contact__form textarea {
+    height: 150px;
+}
+
+.contact__form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: orange;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact__form button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.contact__form .error {
+    color: red;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.contact__form .success {
+    color: rgb(80, 190, 80);
+    font-size: 0.8rem;
+    font-weight: 400;
+}

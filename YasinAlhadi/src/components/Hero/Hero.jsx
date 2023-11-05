@@ -33,3 +33,6 @@ export const Hero = () => {
         </motion.div>
     )
 }
+
+
+export default Hero;

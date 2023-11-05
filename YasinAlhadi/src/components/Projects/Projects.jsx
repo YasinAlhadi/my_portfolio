@@ -1,51 +1,53 @@
+/* eslint-disable react/prop-types */
+import { useRef } from 'react'
+import { motion, useScroll, useSpring, useTransform } from 'framer-motion'
 import './projects.css'
+import projects from '../../data/projects'
+
+const Project = ({ project }) => {
+    const ref = useRef()
+    const { scrollYProgress } = useScroll({target: ref});
+    const y = useTransform(scrollYProgress, [0, 1], [-400, 900]);
+    return (
+          <section ref={ref}>
+            <div className="container">
+                <motion.div className="wrapper" style={y}>
+                <div className="project-img">
+                    <img src={project.image} alt={project.name} width={200} height={200}/>
+                </div>
+                <div className="project-info">
+                    <h1>{project.title}</h1>
+                    <p>{project.description}</p>
+                    <div className="project-links">
+                        <a className='demo' href={project.demo} target="_blank" rel="noreferrer">
+                            <i className="fas fa-eye"></i> Demo
+                        </a>
+                        <a className='code' href={project.github} target="_blank" rel="noreferrer">
+                            <i className="fab fa-github"></i> Code
+                        </a>
+                    </div>
+                </div>
+                </motion.div>
+            </div>
+          </section>
+    )
+    }
 
 export const Projects = () => {
+    const ref = useRef()
+    const { scrollYProgress } = useScroll({target: ref, offset:["end end", "start start"]})
+    const progress = useSpring(scrollYProgress, {damping: 90, stiffness: 900})
   return (
-    <div className='projects' id='projects'>
-        <div className='projects__title'>Projects</div>
-        <div className='projects__container'>
-            <div className='projects__container__project'>
-            <div className='projects__container__project__image'>
-                <img src='/project.png' alt='Project1' />
-                <div className='projects__container__project__text__title'>Project 1</div>
-            </div>
-            <div className='projects__container__project__text'>
-                
-                <div className='projects__container__project__text__description'>Lorem ipsum dolor siLorem ipsum dolor siLorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, volupt iLorem ipsum dolor siLorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, volupt iLorem ipsum dolor siLorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptiLorem ipsum dolor siLorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptas.</div>
-                <div className='projects__container__project__text__buttons'>
-                <button className='projects__container__project__text__buttons__demo'>Demo</button>
-                <button className='projects__container__project__text__buttons__code'>Code</button>
-                </div>
-            </div>
-            </div>
-            <div className='projects__container__project'>
-            <div className='projects__container__project__image'>
-                <img src='public/project.png' alt='Project2' />
-            </div>
-            <div className='projects__container__project__text'>
-                <div className='projects__container__project__text__title'>Project 2</div>
-                <div className='projects__container__project__text__description'>Lorem ipsum dolor siLorem ipsum dolor siLorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptas.</div>
-                <div className='projects__container__project__text__buttons'>
-                <button className='projects__container__project__text__buttons__demo'>Demo</button>
-                <button className='projects__container__project__text__buttons__code'>Code</button>
-                </div>
-            </div>
-            </div>
-            <div className='projects__container__project'>
-            <div className='projects__container__project__image'>
-                <img src='public/project.png' alt='Project3' />
-            </div>
-            <div className='projects__container__project__text'>
-                <div className='projects__container__project__text__title'>Project 3</div>
-                <div className='projects__container__project__text__description'>Lorem ipsum dolor siLorem ipsum dolor siLorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptas.</div>
-                <div className='projects__container__project__text__buttons'>
-                <button className='projects__container__project__text__buttons__demo'>Demo</button>
-                <button className='projects__container__project__text__buttons__code'>Code</button>
-                </div>
-                </div>
-                </div>
-            </div>
+    <div className='projects' id='projects' ref={ref}>
+        <div className="progress">
+            <h1>Projects</h1>
+            <motion.div style={{scaleX:progress}} className="progress-bar"></motion.div>
+        </div>
+        {projects.map((project) => (
+            <Project key={project.id} project={project} />
+        ))}
     </div>
   )
 }
+
+export default Projects;
