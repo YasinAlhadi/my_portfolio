@@ -2,6 +2,7 @@ import './App.css'
 import { Hero } from './components/Hero/Hero'
 import { Navbar } from './components/Navbar/Navbar'
 import { Projects } from './components/Projects/Projects'
+import Skills from './components/Skills/Skills'
 import Contact from './components/contact/Contact'
 
 function App() {
@@ -12,7 +13,9 @@ function App() {
         <Hero />
       </section>
       <Projects />
-      <section>Skills</section>
+      <section id='skills'>
+        <Skills />
+      </section>
       <section id='contact'>
         <Contact />
       </section>

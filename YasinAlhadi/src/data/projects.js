@@ -1,52 +1,44 @@
 const projects = [
     {
         id: 1,
-        title: "Project 1",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. voluptatum.",
+        title: "File manager API",
+        tech: ["Node.js", "Express.js", "MongoDB", "Redis"],
+        objective: "Build a simple platform to upload and view files",
+        description: "User authentication via a token, List all files, Upload a new file, Change permission of a file, View a file, Generate thumbnails for images.",
         image: "project.png",
-        github: "https://github.com",
+        github: "https://github.com/YasinAlhadi/alx-files_manager",
         demo: "https://demo.com"
     },
     {
         id: 2,
-        title: "Project 2",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. voluptatum.",
+        title: "E-commerce API",
+        tech: ["Node.js", "Express.js", "MongoDB"],
+        objective: "Build an API for an e-commerce platform",
+        description: "User authentication via a token, List all files, Upload a new file, Change permission of a file, View a file, Generate thumbnails for images.",
         image: "project.png",
-        github: "https://github.com",
-        demo: "https://demo.com"
+        github: "",
+        demo: "#"
     },
     {
         id: 3,
-        title: "Project 3",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. voluptatum.",
+        title: "Airbnb clone",
+        tech: ["Python-Flask", "MySQL", "HTML", "CSS", "JQuery", "Jinja"],
+        objective: "Build a clone of Airbnb",
+        description: "User authentication via a token, List all files, Upload a new file, Change permission of a file, View a file, Generate thumbnails for images.",
         image: "project.png",
-        github: "https://github.com",
-        demo: "https://demo.com"
+        github: "",
+        demo: "#"
     },
     {
         id: 4,
-        title: "Project 4",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. voluptatum.",
-        image: "https://picsum.photos/200/300",
-        github: "https://github.com",
-        demo: "https://demo.com"
-    },
-    {
-        id: 5,
-        title: "Project 5",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. voluptatum.",
+        title: "CURD Operations",
+        tech: ["Python-Flask", "MySQL", "Bootstrap", "Jinja"],
+        objective: "Build a clone of Airbnb",
+        description: "User authentication via a token, List all files, Upload a new file, Change permission of a file, View a file, Generate thumbnails for images.",
         image: "project.png",
-        github: "https://github.com",
-        demo: "https://demo.com"
+        github: "",
+        demo: "#"
     },
-    {
-        id: 6,
-        title: "Project 6",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-        image: "https://picsum.photos/200/300",
-        github: "https://github.com",
-        demo: "https://demo.com"
-    }
-]
+];
 
 export default projects;

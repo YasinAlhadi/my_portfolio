@@ -1,9 +1,11 @@
 .hero {
-    height: calc(100vh - 60px);
+    /* height: calc(100vh - 60px); */
+    height: 100vh;
     position: relative;
     overflow: hidden;
     background-image: linear-gradient(#264653, #354e58);
-    background-image: url('../../../public/heroimgbg.png');
+    /* background-image: url('heroimgbg.png'); */
+    background-image: url('landingbg.jpg');
     background-size: cover;
     display: flex;
     justify-content: flex-end;
@@ -14,8 +16,8 @@
     width: 50%;
     height: auto;
     position: absolute;
-    background-image: url('../../../public/gb2.png');
-    top: 0;
+    background-image: url('/gb2.png');
+    top: 60px;
     left: 0;
     /* border: 2px solid #dbb32d; */
 }
@@ -34,21 +36,30 @@
 .hero__text h1 {
     font-size: 3rem;
     font-weight: 600;
-    color: rgb(153, 224, 214);
+    color: lightcyan;
     /* text-shadow: 0 0 3px #0a0909; */
     margin-bottom: 1rem;
     padding: 0.5rem 1rem;
     background-color: hsla(0, 4%, 5%, 0.521);
-    /* border: 1px solid red; */
+    border-bottom: 3px solid #fff;
 }
 
 .hero__text h2 {
     font-size: 2rem;
     font-weight: 600;
     text-align: center;
-    color: #0e0d0d;
+    color: orange;
     margin-bottom: 1rem;
-   /*  border: 1px solid red; */
+}
+
+.hero__text h2::after {
+    content: '';
+    width: 10%;
+    height: 5px;
+    background-color: orange;
+    display: block;
+    margin: auto;
+    margin-bottom: 1rem;
 }
 
 .hero__text p {
@@ -68,11 +79,12 @@
 .hero__buttons button{
     font-size: 1rem;
     font-weight: 500;
-    color: lightcyan;
-    padding: 0.5rem 1rem;
-    border: 1px solid #24221f;
+    width: 150px;
+    background-color: orange;
+    color: black;
+    padding: 0.8rem 1rem;
     border-radius: 5px;
-    background-color: transparent;
+    border: none;
     transition: all 0.3s ease-in;
 }
 
@@ -80,4 +92,5 @@
     background-color: #e9c46a;
     color: #0a0909;
     cursor: pointer;
+    transform: scale(1.1);
 }
